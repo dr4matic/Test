@@ -1,7 +1,13 @@
-﻿internal class Program
+﻿using BClass;
+
+internal class Program
 {
     private static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        var read = Console.ReadLine();
+
+        var a = new CCalculator();
+
+        Console.WriteLine(a.Calculate(read));
     }
 }
