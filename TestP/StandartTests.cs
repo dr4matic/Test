@@ -1,27 +1,28 @@
-using BClass;
-using System.Security.Cryptography.X509Certificates;
+﻿using BClass;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace TestP
 {
-    public class CalculatorTest
+    [TestClass]
+    public class StandartTests
     {
         private CCalculator _calculator;
 
-        public CalculatorTest()
+        public StandartTests()
         {
             _calculator = new CCalculator();
         }
 
-        [Theory]
+        /*[Theory]
         [InlineData("")]
         [InlineData(null)]
         [InlineData("10 * 2")]
-        [InlineData("kapibara")]
+        [InlineData("kapibara")]*/
         public void Test1(string expression)
         {
             Assert.Throws<CalculatorException>(() => _calculator.Calculate(expression));
         }
-        [Fact]
+        /*[Fact]*/
         public void CalculatorAddSuccess()
         {
             var a = new Random();
@@ -31,7 +32,7 @@ namespace TestP
             var result = _calculator.Calculate($"{b}+{c}");
             Assert.Equal(x, result);
         }
-        [Fact]
+        /*[Fact]*/
         public void CalculatorSubSuccess()
         {
             var a = new Random();

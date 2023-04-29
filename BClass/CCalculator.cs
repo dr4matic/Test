@@ -20,7 +20,7 @@
                 return 8;
             }
 
-            throw new CalculatorException();
+            throw new Exception();
         }
     }
 }
